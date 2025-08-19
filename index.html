@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Маша Ким — студия маникюра</title>
+  <meta name="description" content="Лендинг мастера маникюра Маши Ким: маникюр, покрытие гель-лаком, дизайн и наращивание. Современный спокойный стиль и аккуратная работа." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-mark">MK</span>
+        <span class="logo-text">Маша Ким</span>
+      </div>
+      <nav class="nav">
+        <a href="#about">Обо мне</a>
+        <a href="#services">Услуги</a>
+        <a href="#gallery">Работы</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#booking" class="btn btn--small">Записаться</a>
+      </nav>
+      <button class="burger" aria-label="Меню" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Эстетичный маникюр <span class="accent">в один тон</span> и с дизайном</h1>
+        <p>Спокойные естественные оттенки, четкая архитектура ногтей и стойкое покрытие до 4 недель.</p>
+        <div class="hero-cta">
+          <a href="#booking" class="btn">Записаться</a>
+          <a href="#gallery" class="btn btn--ghost">Смотреть работы</a>
+        </div>
+        <ul class="badges">
+          <li>Стерильность 4 этапа</li>
+          <li>Топовые материалы</li>
+          <li>Гарантия 7 дней</li>
+        </ul>
+      </div>
+      <div class="hero-media">
+        <div class="hero-card">
+          <img src="assets/work1.png" alt="Маникюр — пример работы" loading="lazy">
+          <div class="shine"></div>
+        </div>
+        <div class="hero-blur"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container about-inner">
+      <div class="about-media">
+        <img src="master.png" alt="Мастер по маникюру Маша Ким" />
+      </div>
+      <div class="about-text">
+        <h2>Привет! Я Маша Ким</h2>
+        <p>Мастер аппаратного маникюра и аккуратного покрытия. Работаю в мягкой природной палитре и минимализме. Люблю чистую кутикулу, ровные бликовые линии и дизайн с тонкими линиями золота.</p>
+        <div class="stats">
+          <div class="stat"><span>4+</span> года опыта</div>
+          <div class="stat"><span>1500+</span> счастливых клиентов</div>
+          <div class="stat"><span>100%</span> одноразовые расходники</div>
+        </div>
+        <div class="about-actions">
+          <a href="#booking" class="btn">Свободные окна</a>
+          <a href="https://instagram.com/" target="_blank" class="link">Instagram*</a>
+        </div>
+        <small class="note">instagram.com/ma*деятельность организации признана экстремистской в РФ — ссылка на портфолио.</small>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Услуги и цены</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Маникюр + покрытие</h3>
+          <p>Аппаратный/комбинированный маникюр, выравнивание, однотон.</p>
+          <div class="price">1900 ₽</div>
+        </article>
+        <article class="card">
+          <h3>Маникюр c дизайном</h3>
+          <p>Линии золота, мрамор, абстракция, нежные френчи.</p>
+          <div class="price">2300 ₽</div>
+        </article>
+        <article class="card">
+          <h3>Снятие/коррекция</h3>
+          <p>Снятие старого покрытия, укрепление, ремонт.</p>
+          <div class="price">500–1200 ₽</div>
+        </article>
+        <article class="card">
+          <h3>Наращивание</h3>
+          <p>Эстетичная архитектура, длина до XL, формы square/almond.</p>
+          <div class="price">3000 ₽</div>
+        </article>
+      </div>
+      <p class="hint">Материалы: Kodi, CND, EzFlow. Дезинфекция — раствор, ультразвук, сухожар.</p>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2>Портфолио</h2>
+      <div class="grid">
+        <img src="work1.png" alt="работа 1" loading="lazy">
+        <img src="work2.png" alt="работа 2" loading="lazy">
+        <img src="work3.png" alt="работа 3" loading="lazy">
+        <img src="work4.png" alt="работа 4" loading="lazy">
+        <img src="work5.png" alt="работа 5" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="reviews">
+    <div class="container">
+      <h2>Отзывы</h2>
+      <div class="slider" aria-label="Отзывы клиентов">
+        <div class="slide">
+          <p>«Покрытие носилось три недели без сколов. Очень аккуратная работа и приятная атмосфера!»</p>
+          <span>— Анна</span>
+        </div>
+        <div class="slide">
+          <p>«Люблю спокойные оттенки, Маша попала точно в мой стиль. Вернусь снова!»</p>
+          <span>— Дарья</span>
+        </div>
+        <div class="slide">
+          <p>«Нежные золотые линии — восторг. Сервис и стерильность на уровне.»</p>
+          <span>— Ольга</span>
+        </div>
+      </div>
+      <div class="dots" role="tablist" aria-label="Навигация по отзывам"></div>
+    </div>
+  </section>
+
+  <section id="booking" class="booking">
+    <div class="container booking-inner">
+      <div class="booking-text">
+        <h2>Запишитесь на удобное время</h2>
+        <p>Студия рядом с метро. Работаю пн–сб с 10:00 до 20:00.</p>
+        <ul class="list">
+          <li>Напоминание о записи за день</li>
+          <li>Оплата наличными/переводом</li>
+          <li>Гарантия на покрытие 7 дней</li>
+        </ul>
+      </div>
+      <form class="form" onsubmit="return submitForm(event)">
+        <label>Имя<input type="text" name="name" required placeholder="Ваше имя"></label>
+        <label>Телефон<input type="tel" name="phone" required placeholder="+7 (___) ___-__-__"></label>
+        <label>Услуга
+          <select name="service" required>
+            <option value="Маникюр + покрытие">Маникюр + покрытие</option>
+            <option value="Маникюр с дизайном">Маникюр с дизайном</option>
+            <option value="Снятие/коррекция">Снятие/коррекция</option>
+            <option value="Наращивание">Наращивание</option>
+          </select>
+        </label>
+        <label>Комментарий<textarea name="comment" rows="3" placeholder="Желаемая дата/время"></textarea></label>
+        <button class="btn" type="submit">Отправить</button>
+        <p class="policy">Нажимая «Отправить», вы соглашаетесь с политикой обработки персональных данных.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="logo"><span class="logo-mark">MK</span><span class="logo-text">Маша Ким</span></div>
+        <p>Маникюр студия · г. Москва, Проспект Мира · пн–сб 10:00–20:00</p>
+      </div>
+      <div class="contacts">
+        <a href="tel:+79990000000">+7 (999) 000-00-00</a>
+        <a href="https://wa.me/79990000000" target="_blank">WhatsApp</a>
+        <a href="https://t.me/" target="_blank">Telegram</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie" id="cookie">
+    <p>Мы используем cookies, чтобы сайт работал лучше.</p>
+    <button class="btn btn--small" onclick="hideCookie()">Ок</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
