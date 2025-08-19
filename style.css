@@ -1,0 +1,139 @@
+/* === Брендовые переменные (цвета из фото 8, стиль из фото 9) === */
+:root{
+  --bg: #F3EFEA;
+  --ink: #2C2A29;
+  --taupe: #B8A89A;
+  --olive: #3E4A3C;
+  --white: #FFFFFF;
+  --gold: #C9A24A;
+  --accent1: #7B5FD1;
+  --accent2: #2D1B4E;
+  --radius: 22px;
+  --shadow: 0 10px 30px rgba(46, 34, 78, .15);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: 'Caviar Dreams','Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--ink);
+  background: radial-gradient(1000px 600px at 85% -10%, rgba(123,95,209,.12), transparent 60%) var(--bg);
+}
+
+.container{width:min(1120px, 90vw); margin:0 auto}
+
+.site-header{
+  position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(8px);
+  background:linear-gradient( to bottom, rgba(243,239,234,.9), rgba(243,239,234,.6));
+  border-bottom:1px solid rgba(62,74,60,.08);
+}
+.header-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+
+.logo{display:flex; align-items:center; gap:10px; font-weight:700}
+.logo-mark{
+  width:36px; height:36px; display:grid; place-items:center; border-radius:12px;
+  background:linear-gradient(135deg, var(--accent1), var(--accent2)); color:white; font-weight:700
+}
+.logo-text{letter-spacing:.02em}
+
+.nav{display:flex; gap:18px; align-items:center}
+.nav a{color:var(--ink); text-decoration:none; opacity:.8}
+.nav a:hover{opacity:1}
+.btn{
+  background:linear-gradient(135deg, var(--accent1), var(--accent2));
+  color:white; padding:14px 20px; border-radius:999px; border:none; text-decoration:none; display:inline-block;
+  box-shadow:var(--shadow); transition:transform .15s ease, box-shadow .2s ease
+}
+.btn:hover{transform:translateY(-1px); box-shadow:0 14px 40px rgba(45,27,78,.25)}
+.btn--ghost{background:transparent; color:var(--olive); border:1px solid rgba(62,74,60,.25)}
+.btn--small{padding:10px 14px; font-size:.95rem}
+
+.burger{display:none; background:none; border:0}
+.burger span{display:block; width:24px; height:2px; background:var(--ink); margin:5px 0}
+
+.hero{padding:64px 0 24px; position:relative; overflow:hidden}
+.hero-inner{display:grid; grid-template-columns: 1.1fr .9fr; gap:40px; align-items:center}
+.hero-text h1{font-size: clamp(28px, 4vw, 46px); line-height:1.15; margin:0 0 16px}
+.hero-text .accent{background:linear-gradient(135deg,var(--gold),#e9d6a0); -webkit-background-clip:text; background-clip:text; color:transparent}
+.hero-cta{display:flex; gap:12px; margin:22px 0}
+.badges{display:flex; gap:16px; padding:0; list-style:none; margin:14px 0 0}
+.badges li{padding:8px 12px; border-radius:999px; background:rgba(62,74,60,.08); font-size:.95rem}
+
+.hero-media{position:relative; min-height:360px}
+.hero-card{position:relative; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); transform:rotate(-2.5deg)}
+.hero-card img{display:block; width:100%; height:auto}
+.shine{position:absolute; inset:0; background:radial-gradient(circle at 10% 0%, rgba(255,255,255,.35), transparent 45%)}
+.hero-blur{position:absolute; right:-20%; bottom:-20%; width:60%; height:60%; filter:blur(60px); background:radial-gradient(closest-side, rgba(123,95,209,.35), transparent)}
+
+.about{padding:80px 0}
+.about-inner{display:grid; grid-template-columns: .95fr 1.05fr; gap:36px; align-items:center}
+.about-media img{width:100%; border-radius: calc(var(--radius) + 6px); box-shadow:var(--shadow)}
+.about-text h2{margin:0 0 10px; font-size: clamp(24px, 3.2vw, 34px)}
+.about-text p{opacity:.9}
+.stats{display:flex; gap:18px; flex-wrap:wrap; margin:16px 0 8px}
+.stat{background:linear-gradient(180deg, rgba(190,176,162,.35), rgba(190,176,162,.15)); border:1px solid rgba(62,74,60,.15); padding:12px 14px; border-radius:14px}
+.stat span{font-weight:700}
+.about-actions{display:flex; gap:12px; margin:14px 0}
+.link{color:var(--olive); text-decoration:underline dotted}
+
+.services{padding:72px 0; background: linear-gradient(180deg, rgba(62,74,60,.04), transparent 35%)}
+.services h2, .gallery h2, .reviews h2, .booking h2{font-size: clamp(24px,3vw,32px); margin:0 0 22px}
+.cards{display:grid; grid-template-columns: repeat(4, 1fr); gap:16px}
+.card{padding:20px; border-radius:var(--radius); background:rgba(255,255,255,.8); box-shadow:var(--shadow); border:1px solid rgba(62,74,60,.08)}
+.card .price{margin-top:12px; font-weight:700; color:var(--olive); font-size:1.1rem}
+.hint{opacity:.7; margin-top:16px}
+
+.gallery{padding:80px 0 60px}
+.grid{display:grid; grid-template-columns: repeat(5, 1fr); gap:10px}
+.grid img{width:100%; height:220px; object-fit:cover; border-radius:16px}
+
+.reviews{padding:72px 0; background:linear-gradient(180deg, transparent, rgba(123,95,209,.08))}
+.slider{position:relative; display:flex; overflow:hidden; border-radius:var(--radius); background:rgba(255,255,255,.7); box-shadow:var(--shadow)}
+.slide{min-width:100%; padding:28px; font-size:1.05rem}
+.slide span{opacity:.7}
+.dots{display:flex; gap:8px; justify-content:center; margin-top:12px}
+.dots button{width:10px; height:10px; border-radius:50%; border:0; background:rgba(46,34,78,.25)}
+.dots button.active{background:linear-gradient(135deg, var(--accent1), var(--accent2))}
+
+.booking{padding:80px 0}
+.booking-inner{display:grid; grid-template-columns: 1fr 1fr; gap:24px; align-items:start}
+.list{margin:8px 0 0; padding-left:18px}
+.form{display:grid; gap:12px; background:rgba(255,255,255,.8); border:1px solid rgba(62,74,60,.1); padding:20px; border-radius:var(--radius); box-shadow:var(--shadow)}
+.form label{display:grid; gap:6px; font-weight:500}
+.form input, .form select, .form textarea{
+  padding:14px 12px; border-radius:12px; border:1px solid rgba(62,74,60,.2); background:var(--white);
+}
+.form button{margin-top:4px}
+
+.site-footer{padding:28px 0; background:rgba(62,74,60,.06); border-top:1px solid rgba(62,74,60,.12)}
+.footer-inner{display:flex; align-items:center; justify-content:space-between; gap:16px}
+.contacts{display:flex; gap:14px}
+.contacts a{color:var(--ink); text-decoration:none; opacity:.8}
+.contacts a:hover{opacity:1}
+
+.cookie{position:fixed; left:20px; bottom:20px; display:flex; gap:10px; align-items:center; background:rgba(47,34,78,.95); color:white; padding:12px 14px; border-radius:14px; box-shadow:var(--shadow)}
+.cookie .btn{background:white; color:var(--ink)}
+
+/* --- Адаптив --- */
+@media (max-width: 940px){
+  .hero-inner, .about-inner, .booking-inner{grid-template-columns: 1fr}
+  .grid{grid-template-columns: repeat(3, 1fr)}
+  .cards{grid-template-columns: repeat(2, 1fr)}
+  .hero-media{order:-1}
+}
+@media (max-width: 560px){
+  .nav{display:none}
+  .burger{display:block}
+  .grid{grid-template-columns: repeat(2, 1fr)}
+}
+
+/* === Override: только текст в кнопке "Записаться" в шапке === */
+.site-header .nav .btn,
+.site-header .nav .btn:link,
+.site-header .nav .btn:visited{
+  color: #d9d9d9 !important; /* светло-серый текст по умолчанию */
+}
+.site-header .nav .btn:hover,
+.site-header .nav .btn:focus-visible{
+  color: #f7f4ef !important; /* молочный текст при наведении/фокусе */
+}
